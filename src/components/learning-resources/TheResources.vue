@@ -11,7 +11,12 @@
 </template>
 
 <script>
+import StoredResources from './StoredResources';
+
 export default {
+	components: {
+		StoredResources,
+	},
 	data() {
 		return {
 			selectedTab: 'stored-resources',
