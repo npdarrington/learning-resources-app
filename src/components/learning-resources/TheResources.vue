@@ -38,6 +38,11 @@ export default {
 			],
 		};
 	},
+	provide() {
+		return {
+			resources: this.storedResources,
+		};
+	},
 	methods: {
 		setSelectedTab(tab) {
 			this.selectedTab = tab;
