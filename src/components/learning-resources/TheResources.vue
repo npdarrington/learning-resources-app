@@ -12,10 +12,12 @@
 
 <script>
 import StoredResources from './StoredResources';
+import AddResource from './AddResource';
 
 export default {
 	components: {
 		StoredResources,
+		AddResource,
 	},
 	data() {
 		return {
