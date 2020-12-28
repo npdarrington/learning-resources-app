@@ -6,7 +6,20 @@
 export default {
 	data() {
 		return {
-			storedResouces: [],
+			storedResouces: [
+				{
+					id: 'official-guide',
+					title: 'Official Guide',
+					description: 'The official Vue.js documentation',
+					link: 'https://vuejs.org',
+				},
+				{
+					id: 'google',
+					title: 'Google',
+					description: 'Learn to Google',
+					link: 'https://google.com',
+				},
+			],
 		};
 	},
 };
