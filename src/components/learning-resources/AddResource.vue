@@ -1,6 +1,6 @@
 <template>
 	<base-card>
-		<form>
+		<form @submit.prevent="submitData">
 			<div class="form-control">
 				<label for="title">Title:</label>
 				<input type="text" name="title" id="title" ref="titleInput" />
@@ -38,6 +38,8 @@ export default {
 			const enteredTitle = this.$refs.titleInput.value;
 			const enteredDescription = this.$refs.descriptionInput.value;
 			const enteredLink = this.$refs.linkInput.value;
+
+			this.addResource(enteredTitle, enteredDescription, enteredLink);
 		},
 	},
 };
