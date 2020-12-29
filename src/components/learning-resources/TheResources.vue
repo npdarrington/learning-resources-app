@@ -45,6 +45,7 @@ export default {
 	provide() {
 		return {
 			resources: this.storedResources,
+			addResource: this.addResource,
 		};
 	},
 	methods: {
