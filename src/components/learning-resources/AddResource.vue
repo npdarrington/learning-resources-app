@@ -1,4 +1,13 @@
 <template>
+	<base-dialog v-if="inputIsInvalid" title="Invalid Input">
+		<template #default>
+			<p>At least one input value is invalid.</p>
+			<p>
+				Please check all inputs and enter at least a few characters into each
+				input field.
+			</p>
+		</template>
+	</base-dialog>
 	<base-card>
 		<form @submit.prevent="submitData">
 			<div class="form-control">
