@@ -7,6 +7,9 @@
 				input field.
 			</p>
 		</template>
+		<template #actions>
+			<base-button @click="confirmError">Okay</base-button>
+		</template>
 	</base-dialog>
 	<base-card>
 		<form @submit.prevent="submitData">
@@ -35,7 +38,9 @@
 </template>
 
 <script>
+import BaseButton from '../UI/BaseButton.vue';
 export default {
+	components: { BaseButton },
 	inject: {
 		addResource: {
 			type: Function,
@@ -71,6 +76,9 @@ export default {
 				return false;
 			}
 			return true;
+		},
+		confirmError() {
+			this.inputIsInvalid = false;
 		},
 	},
 };
