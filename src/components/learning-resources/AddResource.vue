@@ -3,15 +3,20 @@
 		<form>
 			<div class="form-control">
 				<label for="title">Title:</label>
-				<input type="text" name="title" id="title" />
+				<input type="text" name="title" id="title" ref="titleInput" />
 			</div>
 			<div class="form-control">
 				<label for="title">Description:</label>
-				<textarea id="description" name="description" rows="3"></textarea>
+				<textarea
+					id="description"
+					name="description"
+					rows="3"
+					ref="descriptionInput"
+				></textarea>
 			</div>
 			<div class="form-control">
 				<label for="link">Link:</label>
-				<input type="url" name="link" id="link" />
+				<input type="url" name="link" id="link" ref="linkInput" />
 			</div>
 			<div>
 				<base-button type="Submit">Add Resource</base-button>
@@ -24,7 +29,9 @@
 export default {
 	methods: {
 		submitData() {
-			// code here
+			const enteredTitle = this.$refs.titleInput.value;
+			const enteredDescription = this.$refs.descriptionInput.value;
+			const enteredUrl = this.$refs.linkInput.value;
 		},
 	},
 };
