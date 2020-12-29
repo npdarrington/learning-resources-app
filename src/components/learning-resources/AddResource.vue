@@ -52,7 +52,6 @@ export default {
 
 			if (!validation) {
 				this.inputIsInvalid = true;
-				return;
 			} else {
 				this.addResource(enteredTitle, enteredDescription, enteredLink);
 				this.inputIsInvalid = false;
