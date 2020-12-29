@@ -7,3 +7,14 @@
 		</header>
 	</dialog>
 </template>
+
+<script>
+export default {
+	props: {
+		title: {
+			type: String,
+			required: false,
+		},
+	},
+};
+</script>
