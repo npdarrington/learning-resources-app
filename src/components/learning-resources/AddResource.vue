@@ -31,7 +31,7 @@ export default {
 		submitData() {
 			const enteredTitle = this.$refs.titleInput.value;
 			const enteredDescription = this.$refs.descriptionInput.value;
-			const enteredUrl = this.$refs.linkInput.value;
+			const enteredLink = this.$refs.linkInput.value;
 		},
 	},
 };
