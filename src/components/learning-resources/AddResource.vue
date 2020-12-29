@@ -33,13 +33,36 @@ export default {
 			required: true,
 		},
 	},
+	data() {
+		return {
+			inputIsInvalid: false,
+		};
+	},
 	methods: {
 		submitData() {
 			const enteredTitle = this.$refs.titleInput.value;
 			const enteredDescription = this.$refs.descriptionInput.value;
 			const enteredLink = this.$refs.linkInput.value;
 
-			this.addResource(enteredTitle, enteredDescription, enteredLink);
+			const validation = this.validateInputs(
+				enteredTitle,
+				enteredDescription,
+				enteredLink
+			);
+
+			if (!validation) {
+				this.inputIsInvalid = true;
+				return;
+			} else {
+				this.addResource(enteredTitle, enteredDescription, enteredLink);
+				this.inputIsInvalid = false;
+			}
+		},
+		validateInputs(title, description, link) {
+			if (!title.trim() || !description.trim() || !link.trim()) {
+				return false;
+			}
+			return true;
 		},
 	},
 };
